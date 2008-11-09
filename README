@@ -1,0 +1,62 @@
+Revenge of the Orange
+=====================
+A Mini Ludum Dare #5 entry by Tenoch
+
+In Chain Reaction, by BenW (http://www.ludumdare.com/compo/2007/12/16/finally-finished/),
+an orange tile had to escape the terrifying advance of the musical tide of explosions.
+
+Enough fleeing.
+Time for revenge.
+
+At each level, our hero tile has to take advantage of the chain reactions to blow all the targets at the same time. To achieve this, it received the gift of tile shifting: either the tiles around it, or full rows and columns. An invisible walker runs around the world, and makes the chain reactions start. Be sure to keep an eye on it.
+Oh, also, be careful not to step in the void.
+
+Controls
+--------
+
+Use arrow keys to move the hero tile.
+Use X and V to cycle tiles around it.
+Use arrow keys while pressing C to shift rows and columns.
+
+Press Escape at any time (including the game over screen) to quit.
+
+On the left of the screen is indicated the number of levels cleared, and on the right the number of remaining lives.
+
+Running the game
+----------------
+
+Run "lua revenge.lua" in the game's directory.
+
+To run the game, you need a Lua interpretor. On Ubuntu, "sudo apt-get install lua5.1" if you don't have it already.
+
+The default resolution is 640x500. If it seems too small for your screen, you can run with options. For instance "lua revenge.lua 1024 768" or "lua revenge.lua 1600 1200 fullscreen"
+The game will adapt to the chosen resolution.
+
+Compiling
+---------
+
+Revenge uses my own game library: evöL. As it is still in heavy development, the version I used is included with Revenge. 
+
+A precompiled version of evöL is given, that may work on Ubuntu. If it doesn't, try compiling yourself.
+
+To compile, you will need the development files for:
+
+SDL
+SDL_image
+SDL_ttf
+SDL_gfx
+SDL_mixer
+Lua
+
+I provide a SConstruct file, for the SCons build sytem. If necessary, modify the SConstruct file to reflect your installation of SDL* and Lua.
+Then run scons in the game's directory to build the evöL module.
+
+There is also a _very_ basic Makefile if you don't have SCons installed. Again, modify it to reflect your installation of SDL* and Lua.
+Then run make in the game's directory.
+
+The evöL library (and the game) has been developed and tested on an Ubuntu GNU/Linux machine only. However since all libraries used, as well as Lua, are very portable, it should be able to build and play the game on Windows, Mac OS X and other systems.
+
+Feedback
+--------
+
+Feedback everything you want to me: Noé Falzon, firstname.lastname(at)aliceadsl.fr
